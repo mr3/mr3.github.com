@@ -1,0 +1,18 @@
+# 当修改文件时重新生成站点
+auto: true
+
+# 代码高亮
+pygments: true
+
+# markdown 渲染引擎 rdiscount 不实用maruku 是因为看到有人说 性能略差切对中文支持不佳
+markdown: rdiscount
+
+# 永久链接 文章TItle
+permallink: /:title
+
+# http://zh.wikipedia.org/wiki/Atom_(標準)
+feed: /atom.xml
+
+title: imr3.com
+url: http://imr3.com
+author: mr3
