@@ -8,7 +8,7 @@ pygments: true
 markdown: rdiscount
 
 # 永久链接 文章TItle
-permallink: /:title
+permallink: /:categories/:title.html
 
 # http://zh.wikipedia.org/wiki/Atom_(標準)
 feed: /atom.xml
