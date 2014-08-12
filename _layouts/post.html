@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4>{{ page.title }}</h4></div>
+		<div class="panel-body">
+			{{ content }}
+			<p>–<abbr title="End of file">EOF</abbr>–</p>
+			<p class="text-right">posted on {{ page.date|date:"%Y-%m-%d" }}.</p>
+		</div>
+	</div>
+</div>
