@@ -10,7 +10,7 @@ layout: default
         <div class="list-group">
       	{% for post in site.categories.blog %}
           	<a class="list-group-item" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-      	{ % endfor % }
+      	{% endfor %}
         </div>
     </div>
 </div>
