@@ -8,11 +8,16 @@ pygments: true
 markdown: rdiscount
 
 # 永久链接 文章TItle
-permallink: /:categories/:title.html
+permallink: /:categories/:title
 
 # http://zh.wikipedia.org/wiki/Atom_(標準)
 feed: /atom.xml
 
-title: imr3.com
-url: http://imr3.com
+# 站点标题
+title: 就是折腾
+
+# 站点地址
+url: imr3.com
+
+# 站点作者
 author: mr3
