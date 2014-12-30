@@ -8,7 +8,7 @@ pygments: true
 markdown: rdiscount
 
 # 永久链接 文章Title
-permalink: /:categories/:title
+permalink: /:categories/:title/
 
 # 相对永久链接
 relative_permalinks: false
@@ -20,7 +20,7 @@ feed: /atom.xml
 title: 就是折腾
 
 # 站点地址
-url: httblog.imr3.com
+url: http://blog.imr3.com
 
 # 站点作者
 author: mr3
