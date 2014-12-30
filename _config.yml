@@ -7,8 +7,11 @@ pygments: true
 # markdown 渲染引擎 rdiscount 不实用maruku 是因为看到有人说 性能略差切对中文支持不佳
 markdown: rdiscount
 
-# 永久链接 文章TItle
-permallink: /:categories/:title/
+# 永久链接 文章Title
+permallink: /:title
+
+# 相对永久链接
+relative_permalinks: false
 
 # http://zh.wikipedia.org/wiki/Atom_(標準)
 feed: /atom.xml
@@ -17,7 +20,7 @@ feed: /atom.xml
 title: 就是折腾
 
 # 站点地址
-url: blog.imr3.com
+url: httblog.imr3.com
 
 # 站点作者
 author: mr3
