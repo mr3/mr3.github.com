@@ -8,7 +8,7 @@ pygments: true
 markdown: rdiscount
 
 # 永久链接 文章Title
-permallink: /:title
+permalink: /:categories/:title
 
 # 相对永久链接
 relative_permalinks: false
