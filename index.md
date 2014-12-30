@@ -8,8 +8,8 @@ layout: default
           <h3 class="panel-title"><b>Articles</b></h3>
         </div>
         <div class="list-group">
-      	{% for post in site.categories.blog %}
-          	<a class="list-group-item" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+      	{% for post in site.posts %}
+          	<a class="list-group-item" href="{{ post.url }}">{{ post.title }}</a>
       	{% endfor %}
         </div>
     </div>
