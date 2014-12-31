@@ -1,8 +1,8 @@
 ---
 layout:       post
-title:        元旦出行前的啰嗦
+title:        2015元旦出行前
 category:     life
-description:  元旦出行前的啰嗦
+description:  2015元旦出行前
 ---
 元旦马上就要来了，又是三天的假期，想想是不能呆在上海了，否则又是宅在家里。本来是想要去麻城的，刚听到这城市还以为是[《让子弹飞》](http://movie.douban.com/subject/3742360/)里面马县长骗张麻子去上任的那座城，后来重看了此电影才知道那个叫鹅城。
 
