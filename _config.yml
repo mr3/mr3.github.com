@@ -23,4 +23,6 @@ title: 就是折腾
 url: http://blog.imr3.com
 
 # 站点作者
-author: mr3
+author:
+  name: mr3
+  email: mr3.sole@gmail.com
