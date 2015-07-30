@@ -2,7 +2,7 @@
 layout:       post
 title:        程序员翻墙必备
 category:     tech
-description: 程序员翻墙必备
+description:  程序员翻墙必备
 ---
 这两天订购了<a href="https://portal.shadowsocks.com/aff.php?aff=2220" title="轻量级科学上网姿势，改变您的生活体验！" target="_blank" >Shadowsocks.com</a>普通版 一年, 目前2个美国节点, 7个亚洲节点, 不限制流量, 不过同一时间同一个账号仅限一个终端使用. PS: 同一个外网IP的情况, 希望你明白.  :)
 
