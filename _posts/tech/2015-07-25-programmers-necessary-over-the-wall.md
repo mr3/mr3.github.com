@@ -1,4 +1,4 @@
-﻿---
+---
 layout:       post
 title:        程序员翻墙必备
 category:     tech
