@@ -60,6 +60,14 @@ You'll love the slick user interface, extraordinary features and amazing perform
 [Log Parser Studio][25] Introducing
 http://blog.codinghorror.com/microsoft-logparser/
 
+[Fiddler][28] The free web debugging proxy for any browser, system or platform
+
+[SoapUI][29] is a free and open source cross-platform Functional Testing solution.
+
+[Snippet Compiler][30] compiles snippets.
+
+[Markdown][31] is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+
 [1]:http://www.jetbrains.com/resharper/
 [2]:https://www.jetbrains.com/profiler/
 [3]:https://www.jetbrains.com/pycharm/
@@ -86,3 +94,7 @@ http://blog.codinghorror.com/microsoft-logparser/
 [24]:https://www.microsoft.com/en-us/download/details.aspx?id=24659
 [25]:http://blogs.technet.com/b/exchange/archive/2013/06/17/log-parser-studio-2-2-is-now-available.aspx
 [27]:http://blog.codinghorror.com/microsoft-logparser/
+[28]:http://www.telerik.com/fiddler
+[29]:https://www.soapui.org/
+[30]:http://www.sliver.com/dotnet/snippetcompiler/
+[31]:http://markdownpad.com/
