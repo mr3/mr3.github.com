@@ -4,8 +4,8 @@ auto: true
 # 代码高亮
 pygments: true
 
-# markdown 渲染引擎 rdiscount 不实用maruku 是因为看到有人说 性能略差切对中文支持不佳
-markdown: rdiscount
+# markdown 渲染引擎
+markdown: kramdown
 
 # 永久链接 文章Title
 permalink: /:categories/:title/
