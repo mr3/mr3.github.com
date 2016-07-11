@@ -2,7 +2,7 @@
 auto: true
 
 # 代码高亮
-pygments: true
+highlighter: rouge
 
 # markdown 渲染引擎
 markdown: kramdown
