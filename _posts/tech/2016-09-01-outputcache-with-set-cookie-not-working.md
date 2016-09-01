@@ -9,6 +9,7 @@ description:  使用 OutputCache 时设置 Cookie 疑惑小结
 而其他 Action 则是正常的。排查下来发现是这个 Action 有操作 Repsonse.Cookie。
 
 疑问为什么 Cookie 会对 OutputCache 造成影响呢？ 在 [stackoverflow ][2] 上看到了一个答案
+
 > You try to cache this on server side, and at the same time you try to set the cookie on the client - this is not working together.
 
 觉得这个解释很合理，你一方面尝试在服务器缓存，同时又在客户端设置Cookie，两者不可同时起作用。
@@ -17,7 +18,9 @@ description:  使用 OutputCache 时设置 Cookie 疑惑小结
 
 ![OutputCache OnLeave](http://lh5.ggpht.com/-zZjFPX9Tq30/UG3dotiVFbI/AAAAAAAABDc/Ea8GzBlQFZ0/image_thumb%25255B45%25255D.png?imgmax=865)
 
-在 OutputCacheModule 的 OnLeave 事件中 有对 Response.Cookies 数量的判断，判断集合有数据的话 就不对 Cache 进行操作了，为了进一步验证，又去扒了扒 [OutputCacheModule][4] 的源码，在 1109 行 看到下面的代码
+在 OutputCacheModule 的 OnLeave 事件中 有对 Response.Cookies 数量的判断，
+判断集合有数据的话 就不对 Cache 进行操作了，为了进一步验证，
+又去扒了扒 [OutputCacheModule][4] 的源码，在 1109 行 看到下面的代码
 
 ```csharp
 // MSRC 11855 (DevDiv 297240 / 362405) - We should suppress output caching for responses which contain non-shareable cookies.
@@ -27,12 +30,15 @@ description:  使用 OutputCache 时设置 Cookie 疑惑小结
             reason = "Non-shareable response cookies were present.";
 #endif
             break;
-         }
+        }
 ```
 
-从代码和注释可以看出，抑制包含 non-shareable  cookies 的输出缓存，在任何响应中存在 Cookie 就会禁止 HTTP.SYS 和 IIS 用户模式缓存。
+从代码和注释可以看出，抑制包含 non-shareable  cookies 的输出缓存，
+在任何响应中存在 Cookie 就会禁止 HTTP.SYS 和 IIS 用户模式缓存。
+
 
 接着看 [ContainsNonShareableCookies][5] 这个方法的具体实现
+
 ```csharp
 // returns TRUE iff there is at least one response cookie marked Shareable = false
 internal bool ContainsNonShareableCookies() {
@@ -49,11 +55,14 @@ internal bool ContainsNonShareableCookies() {
 
 同样从代码和注释可以看出，只要响应包含 Cookie，且有一个 Cookie 的 Shareable 属性为 false，就返回 true。
 
+
 结合以上两段代码可以得出结论：只要响应中有一个 cookie 的 Shareable 属性为 false，输出缓存就会失效。
 
-这个 cookie 的 [Shareable][6] 属性在 .NET 4.0 没有找到设置的地方， 后来去 MSDN 看版本信息说是 .NET 4.5后可用，并且 MSDN 对它的解释为确定 cookie 是否允许参与输出缓存，后面去实测确实如此。
+这个 cookie 的 [Shareable][6] 属性在 .NET 4.0 没有找到设置的地方， 后来去 MSDN 看版本信息说是 .NET 4.5后可用，
+并且 MSDN 对它的解释为确定 cookie 是否允许参与输出缓存，后面去实测确实如此。
 
-##### 总结
+### 总结
+
 * .NET 4.0 如果你在使用 OutputCache 时，响应中包含 Cookie，则导致 OutputCache 无效
 * .NET 4.5 如果你在使用 OutputCache 时，响应中包含 Cookie，且所有 Cookie 的 Shareable 属性 都设为 true，则 OutputCache 有效，反之无效。
 
