@@ -14,7 +14,8 @@ description:  VisualStudio 2013 不能编辑代码
 
 ` %userprofile%\AppData\Local\JetBrains\ReSharper\v8.2\SolutionCaches`
 
-PS: 
+PS:
+
 * 这种小问题发生了，不记录一下，下次再出现了，有印象但没记住解决方案还要去查真是有够麻烦。
 * 程序猿查问题还是应该使用 Google，最不及使用 Bing 也可以，Baidu 就不要了。原因很明显，搜索上面提到的 Keywords 即可。
 
