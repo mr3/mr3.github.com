@@ -16,7 +16,7 @@ description:  使用 OutputCache 时设置 Cookie 疑惑小结
 
 好奇 OutputCache 在设置了 Cookie 时是怎么处理的？ Google 后在 blogspot 上看到[一篇文章][3]提到了这一点，如下图
 
-![OutputCache OnLeave](http://lh5.ggpht.com/-zZjFPX9Tq30/UG3dotiVFbI/AAAAAAAABDc/Ea8GzBlQFZ0/image_thumb%25255B45%25255D.png?imgmax=865)
+![OutputCache OnLeave](http://blog.imr3.com/img/posts/tech/OutputCache_OnLeave.png)
 
 在 OutputCacheModule 的 OnLeave 事件中 有对 Response.Cookies 数量的判断，
 判断集合有数据的话 就不对 Cache 进行操作了，为了进一步验证，
