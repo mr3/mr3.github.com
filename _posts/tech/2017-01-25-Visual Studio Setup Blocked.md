@@ -19,7 +19,7 @@ description:  Visual Studio 安装被阻止，安装的版本早于已安装的�
 
 Google 一下找到一篇文章，按照提供的方法解决了问题。
 
-###解决步骤如下
+#### 解决步骤如下
 
 1. 查询关键字 **Detected related bundle**，复制后面紧跟的一串 GUID 字符串，例如 {17551f85-1d1c-4142-a83f-bbd18a3522c2}
 
