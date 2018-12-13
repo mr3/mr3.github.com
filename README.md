@@ -1,4 +1,4 @@
-mr3.github.com
+blog.imr3.com
 ==============
 
 Learn to think, learn to share.

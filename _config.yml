@@ -20,9 +20,9 @@ feed: /atom.xml
 title: 就是折腾
 
 # 站点地址
-url: http://blog.imr3.com
+url: https://blog.imr3.com
 
 # 站点作者
 author:
-  name: mr3
+  name: mark
   email: mr3.sole@gmail.com
