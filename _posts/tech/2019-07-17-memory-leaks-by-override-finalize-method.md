@@ -35,8 +35,7 @@ byte[] compress(String obj, String encoding) throws IOException {
 
 ## Monitor and analysis
 机器在发布Baking过程中通过监控发现堡垒机Survivor区和OldGen都出现异常曲线，如下图
-
-![hickwall_memory_leaks_mosaic](/img/posts/tech/hickwall_memory_leaks_mosaic.jpg | width=850)
+<p><img src="/img/posts/tech/hickwall_memory_leaks_mosaic.jpg" alt="hickwall_memory_leaks_mosaic" width="850"></p>
 
 拉Dump使用MAT分析定位到原因是在[ZstdOutputStream]对象，对象引用关系如下图
 
