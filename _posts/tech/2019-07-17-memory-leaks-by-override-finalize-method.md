@@ -36,7 +36,7 @@ byte[] compress(String obj, String encoding) throws IOException {
 ## Monitor and analysis
 机器在发布Baking过程中通过监控发现堡垒机Survivor区和OldGen都出现异常曲线，如下图
 
-![hickwall_memory_leaks_mosaic](/img/posts/tech/hickwall_memory_leaks_mosaic.jpg)
+![hickwall_memory_leaks_mosaic](/img/posts/tech/hickwall_memory_leaks_mosaic.jpg | width=850)
 
 拉Dump使用MAT分析定位到原因是在[ZstdOutputStream]对象，对象引用关系如下图
 
@@ -115,4 +115,3 @@ Use the Memory Analyzer to analyze productive heap dumps with hundreds of millio
 - [深入探索 JVM 自动资源管理](https://www.infoq.cn/article/Finalize-Exiting-Java)
 - [Java 将弃用 finalize() 方法？](https://www.infoq.cn/article/2017/03/Java-Finalize-Deprecated/)
 - [JVM故障分析系列之七：使用MAT的Histogram和Dominator Tree定位溢出源](https://www.javatang.com/archives/2017/11/08/11582145.html/comment-page-1)
-- [Java认证资料](http://conf.ctripcorp.com/pages/viewpage.action?pageId=155960495)
