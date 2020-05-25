@@ -28,5 +28,3 @@ Google 一下找到一篇文章，按照提供的方法解决了问题。
 3. Try again.
 
 参考：<a href="https://johndelizo.wordpress.com/2013/12/23/visual-studio-2013-setup-blocked-the-product-version-that-you-are-trying-to-set-up-is-earlier-than-the-version-already-installed-on-this-computer-fixed/" target="_blank">Visual Studio 2013 Setup Blocked: The product version that you are trying to set up is earlier than the version already installed on this computer. [FIXED]</a>
-
-如有错误，欢迎指正。

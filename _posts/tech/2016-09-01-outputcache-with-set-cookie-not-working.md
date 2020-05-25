@@ -16,7 +16,7 @@ description:  使用 OutputCache 时设置 Cookie 疑惑小结
 
 好奇 OutputCache 在设置了 Cookie 时是怎么处理的？ Google 后在 blogspot 上看到[一篇文章][3]提到了这一点，如下图
 
-![OutputCache OnLeave](//blog.imr3.com/img/posts/tech/OutputCache_OnLeave.png)
+![OutputCache OnLeave](/img/posts/tech/OutputCache_OnLeave.png)
 
 在 OutputCacheModule 的 OnLeave 事件中 有对 Response.Cookies 数量的判断，
 判断集合有数据的话 就不对 Cache 进行操作了，为了进一步验证，
@@ -65,8 +65,6 @@ internal bool ContainsNonShareableCookies() {
 
 * .NET 4.0 如果你在使用 OutputCache 时，响应中包含 Cookie，则导致 OutputCache 无效
 * .NET 4.5 如果你在使用 OutputCache 时，响应中包含 Cookie，且所有 Cookie 的 Shareable 属性 都设为 true，则 OutputCache 有效，反之无效。
-
-如有错误，欢迎指正。
 
 [1]:https://msdn.microsoft.com/zh-cn/library/system.web.mvc.outputcacheattribute(v=vs.100).aspx
 [2]:http://stackoverflow.com/questions/9411180/asp-net-outputcache-and-cookies?answertab=votes#tab-top

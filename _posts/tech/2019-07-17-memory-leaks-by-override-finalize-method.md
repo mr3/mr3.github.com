@@ -1,19 +1,18 @@
 ---
 layout:       post
-title:        Memory leaks by override finalize method
+title:        重写finalize方法引发的内存泄露
 category:     tech
 description:  Memory leaks by override finalize method, Zstd
+tags:
+    - JVM
+    - Troubleshooting
 ---
 
 ## Summary
 兄弟团队使用了[Zstd-jni](https://github.com/luben/zstd-jni), 一款提供快速，高性能压缩无损算法的类库，并推荐使用，
-
 我在使用的过程中发现存在内存泄漏，原因是因为类重写了finalize方法，
-
 我也在[issue#83:finalize() should not be overridden](https://github.com/luben/zstd-jni/issues/83)反馈了此问题，
-
 作者已经在[v.1.4.4-3版本:Add option to skip finalizers](https://github.com/luben/zstd-jni/commit/2dd134c987732cca468f3fee8eb50d9c6bb149e0) 增加了补丁，
-
 本文记录发现并解决的过程。
 
 ## Code
@@ -35,7 +34,7 @@ byte[] compress(String obj, String encoding) throws IOException {
 
 ## Monitor and analysis
 机器在发布Baking过程中通过监控发现堡垒机Survivor区和OldGen都出现异常曲线，如下图
-<p><img src="/img/posts/tech/hickwall_memory_leaks_mosaic.jpg" alt="hickwall_memory_leaks_mosaic" width="850"></p>
+![hickwall_memory_leaks_mosaic](/img/posts/tech/hickwall_memory_leaks_mosaic.jpg)
 
 拉Dump使用MAT分析定位到原因是在[ZstdOutputStream]对象，对象引用关系如下图
 

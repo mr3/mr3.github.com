@@ -55,5 +55,3 @@ Commands | Descr
 `db.mycoll.drop()`|  删除集合
 `DBQuery.shellBatchSize = x`|  设置要显示的数量
 `exit`|  退出
-
-如有错误，欢迎指正。

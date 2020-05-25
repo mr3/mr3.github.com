@@ -1,28 +1,104 @@
-# 当修改文件时重新生成站点
-auto: true
+# Site settings
+title: Mark Blog
+SEOTitle: Mark的博客, 分享我的实践和思考
+header-img: img/home-bg.jpg
+email: mr3.sole@gmail.com
+description: "关于程序, 设计, 架构, Javaer, Software Engineer"
+keyword: "Mark Blog, mr3, 博客"
+url: "https://blog.imr3.com"              # your host, for absolute URL
+baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-# 代码高亮
+post:
+  author: Mark
+
+# Publish posts or collection documents with a future date.
+future: true
+
+# SNS settings
+RSS: true
+github_username:    mr3
+
+
+
+# Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
 
-# markdown 渲染引擎
+
+
+# Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
+# `$ gem install jekyll-paginate`
+plugins: [jekyll-paginate]
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-# 永久链接 文章Title
-permalink: /:categories/:title/
 
-# 相对永久链接
-relative_permalinks: false
 
-# http://zh.wikipedia.org/wiki/Atom_(標準)
-feed: /atom.xml
+# Disqus settings
+disqus_username: imr3
 
-# 站点标题
-title: 就是折腾
+# Netease settings
+netease_comment: false
 
-# 站点地址
-url: https://blog.imr3.com
 
-# 站点作者
-author:
-  name: mark
-  email: mr3.sole@gmail.com
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
+# Google Analytics
+ga_track_id: 'UA-39024009-3'            # Format: UA-xxxxxx-xx
+ga_domain: blog.imr3.com
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "What do people live for?<br>For missing someone?<br>For keep living?<br>For live longer?<br>Or for leaving?"
+sidebar-avatar: /img/avatar-mark.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+
+
+# MathJax rendering for layout:page (e.g. post preview)
+page-mathjax: false
+
+
+
+# Friends
+friends: [
+
+]
