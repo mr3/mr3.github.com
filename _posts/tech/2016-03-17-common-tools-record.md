@@ -88,8 +88,6 @@ You'll love the slick user interface, extraordinary features and amazing perform
 
 [Beyond Compare][10] is focused.  Beyond Compare allows you to quickly and easily compare your files and folders.  By using simple, powerful commands you can focus on the differences you're interested in and ignore those you're not.  You can then merge the changes, synchronize your files, and generate reports for your records.
 
-[RDCMan][11] manages multiple remote desktop connections. It is useful for managing server labs or large server farms where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.
-
 [DiskGenius][13]是一款集磁盘分区管理与数据恢复功能于一身的工具软件。
 
 
@@ -103,7 +101,6 @@ You'll love the slick user interface, extraordinary features and amazing perform
 [8]:http://www.sublimetext.com
 [9]:https://sublime.wbond.net/installation#st2
 [10]:http://www.scootersoftware.com/download.php
-[11]:https://www.microsoft.com/en-us/download/details.aspx?id=44989
 [12]:http://www.navicat.com/top10
 [13]:http://www.diskgenius.cn/
 [14]:https://visualstudiogallery.msdn.microsoft.com/45208924-e7b0-45df-8cff-165b505a38d7
