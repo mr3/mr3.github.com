@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  jekyll:
+    image: jekyll/jekyll:latest
+    command: jekyll serve --livereload --drafts
+    ports:
+      - 4001:4000
+    volumes:
+      - .:/srv/jekyll
