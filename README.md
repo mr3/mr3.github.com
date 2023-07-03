@@ -1,4 +1,4 @@
-[Mark Blog](https://blog.imr3.com)
+[Mark Blog](https://mr3.github.io)
 ==============
 
 Mark的博客, 分享我的实践和思考.
